@@ -17,8 +17,8 @@ function Basic01(){
             <p className="font-red">아무거나 글씨</p>
             <p id="pid">p태그 글자</p>
             {
-            //     //삼항연산자
-            //     flag == true ? <h3>{msg}</h3> : <h3>{state}</h3>
+                //     //삼항연산자
+                //     flag == true ? <h3>{msg}</h3> : <h3>{state}</h3>
             }
             {
                 //&& 연산자
@@ -39,7 +39,6 @@ function Basic01(){
     if(flag){
 
         return (
-
         <div className='App'>
             <h1>리엑트 Basic01</h1>
             <p className="font-red">아무거나 글씨</p>
