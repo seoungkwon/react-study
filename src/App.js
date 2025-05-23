@@ -11,6 +11,7 @@ import Props02 from './study/Props02';
 import Practice03 from './Practice/practice03/Practice03';
 import NewsBlog from './newsblog/NewsBlog';
 import Practice04 from './Practice/practice04/Practice04';
+import FoodMarket from './foodmarket/pages/FoodMarket';
 
 function App() {
 
@@ -24,8 +25,10 @@ function App() {
   // return <Props01/>;
   // return <Props02/>;
   // return <Practice03/>;
-  return <NewsBlog/>;
+  // return <NewsBlog/>;
   // return <Practice04/>;
+  return <FoodMarket/>;
+
   /*
   return (
     <div className="App">
