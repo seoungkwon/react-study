@@ -101,22 +101,30 @@ function NewsBlog(){
         news.map((item, index)=>{ // 0 1 2
         //return <div className='post-list'>
         return (
-        <div className='post-list' key={index}>
-        <h4 onClick={()=>{
-        setShowModal(!showModal);
-        setSelectedTitle(item);
-        setSelectedLikeCount(likeCountArr[index]);
-    }}>{item} <span onClick={(event)=>{
+                        <div className='post-list' key={index}>
+                            <h4 onClick={()=>{
+                            setShowModal(!showModal);
+                            setSelectedTitle(item);
+                            setSelectedLikeCount(likeCountArr[index]);
+                        }}>{item} <span onClick={(event)=>{
 
-        event.stopPropagation();
+                            event.stopPropagation();
 
-        let temp = [...likeCountArr];
-        temp[index] += 1;
-        setLikeCountArr(temp);
+                            let temp = [...likeCountArr];
+                            temp[index] += 1;
+                            setLikeCountArr(temp);
 
-        }}>❤</span>{likeCountArr[index]}</h4>
-        <p>내용 무</p>
-    </div>
+                            }}>❤</span>{likeCountArr[index]}</h4>
+                            <p>내용 무</p>
+                            <button onClick={()=>{
+                                let temp = [...news];
+                                temp.splice(index,1);
+                                setNews(temp);
+
+                                likeCountArr.splice(index, 1);
+
+                            }}>삭제</button>
+                        </div>
     )
 
         })
