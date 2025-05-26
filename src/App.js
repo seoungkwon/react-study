@@ -12,6 +12,7 @@ import Practice03 from './Practice/practice03/Practice03';
 import NewsBlog from './newsblog/NewsBlog';
 import Practice04 from './Practice/practice04/Practice04';
 import FoodMarket from './foodmarket/pages/FoodMarket';
+import Practice05 from './Practice/practice05/Practice05';
 
 function App() {
 
@@ -27,7 +28,8 @@ function App() {
   // return <Practice03/>;
   // return <NewsBlog/>;
   // return <Practice04/>;
-  return <FoodMarket/>;
+  // return <FoodMarket/>;
+  return <Practice05/>;
 
   /*
   return (
