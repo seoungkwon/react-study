@@ -12,7 +12,14 @@ import food1 from '../images/food1.jpg';
 import food2 from '../images/food2.jpg';
 import food3 from '../images/food3.jpg';
 
+import foodsData from '../data/foodsData';
+import { useState } from 'react';
+import FoodCard from '../components/FoodCard';
+import Home from './Home';
+
 function FoodMarket() {
+
+    let [foods, setFoods] = useState(foodsData);
 
     return (
         <div>
@@ -26,75 +33,6 @@ function FoodMarket() {
                     </Nav>
                 </Container>
             </Navbar>
-
-            {/*
-                이미지 사용
-                1) css 처리 : 이미지 경로
-                2) React Component js코드에서 처리 : import 한 이후에 사용
-                3) public 폴더에 이미지 저장 후, 서버 경로로 접근해서 사용
-                    src='/images/food1.jpg'
-                    
-                    *권장 방식
-                    src={process.env.PUBLIC_URL +  '/images/food2.jpg'}
-
-                    *기본 서비스 경로 루트 경로 (/)
-                    서버주소:포트번호/ 
-
-                    package.json > hompage 필드 설정 
-                    "homepage":"/foodmarket"
-                        
-            */}
-            {/* <img src={banner_bg}/> */}
-
-            {/* <div className='main-bg' style={{backgroundImage: 'url(' + banner_bg + ')'}}></div> */}
-            <div className='main-bg'></div>
-
-
-            <Container>
-                <Row>
-                    <Col md={4} sm={6}>
-                        <Card style={{ width: '18rem' }}>
-                            {/* <Card.Img variant="top" src={food1} /> */}
-                            <Card.Img variant="top" src='/images/food1.jpg' />
-                            <Card.Body>
-                                <Card.Title>Card Title</Card.Title>
-                                <Card.Text>
-                                    Some quick example text to build on the card title and make up the
-                                    bulk of the card's content.
-                                </Card.Text>
-                                <Button variant="primary">Go somewhere</Button>
-                            </Card.Body>
-                        </Card>
-                    </Col>
-                    <Col md={4} sm={6}>
-                        <Card style={{ width: '18rem' }}>
-                            {/* <Card.Img variant="top" src={food2} /> */}
-                            <Card.Img variant="top" src={process.env.PUBLIC_URL +  '/images/food2.jpg'} />
-                            <Card.Body>
-                                <Card.Title>Card Title</Card.Title>
-                                <Card.Text>
-                                    Some quick example text to build on the card title and make up the
-                                    bulk of the card's content.
-                                </Card.Text>
-                                <Button variant="primary">Go somewhere</Button>
-                            </Card.Body>
-                        </Card>
-                    </Col>
-                    <Col md={4} sm={6}>
-                        <Card style={{ width: '18rem' }}>
-                            <Card.Img variant="top" src={food3} />
-                            <Card.Body>
-                                <Card.Title>Card Title</Card.Title>
-                                <Card.Text>
-                                    Some quick example text to build on the card title and make up the
-                                    bulk of the card's content.
-                                </Card.Text>
-                                <Button variant="primary">Go somewhere</Button>
-                            </Card.Body>
-                        </Card>
-                    </Col>
-                </Row>
-            </Container>
 
 
 
