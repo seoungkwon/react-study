@@ -14,22 +14,24 @@ import Practice04 from './Practice/practice04/Practice04';
 import FoodMarket from './foodmarket/pages/FoodMarket';
 import Practice05 from './Practice/practice05/Practice05';
 
+
 function App() {
 
   //return <Basic01/>;  //JSX 기본
   //return <State01/>;  //useState 사용법
-  // return <Practice01/>;
   //return <Practice01/>;
   // return <Export01/>;
-  // return <State02/>;
-  // return <Practice02/>;
-  // return <Props01/>;
-  // return <Props02/>;
-  // return <Practice03/>;
-  // return <NewsBlog/>;
-  // return <Practice04/>;
+  //return <State02/>;
+  //return <Practice02/>;
+  //return <Props01/>;
+  //return <Props02/>;
+  //return <Practice03/>;
+  //return <NewsBlog/>;
+  //return <Practice04/>;
   // return <FoodMarket/>;
-  return <Practice05/>;
+  // return <Practice05/>;
+  return <FoodMarket/>;
+  // return <Practice05/>;
 
   /*
   return (
