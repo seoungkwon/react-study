@@ -1,7 +1,10 @@
 import { Card, Button } from 'react-bootstrap';
+import { useNavigate } from 'react-router';
 
 //function FoodCard( { foods, index, food } ) {
 function FoodCard(props) {
+
+    let navigate = useNavigate();
 
     return (
         <Card style={{ width: '18rem' }}>
@@ -15,6 +18,9 @@ function FoodCard(props) {
                     {props.food.price}
                 </Card.Text>
                 <Button variant="primary">Go somewhere</Button>
+                <Button variant="primary" onClick={()=>{
+                    navigate("/detail/"+ props.food.id);
+                }}>상세보기</Button>
             </Card.Body>
         </Card>
     );

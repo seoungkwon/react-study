@@ -21,3 +21,5 @@ let foodsData = [
         imgPath: '/images/food3.jpg'
     }
 ];
+
+export default foodsData;
