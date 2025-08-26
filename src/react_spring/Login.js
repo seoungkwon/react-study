@@ -1,13 +1,58 @@
 import { useState } from "react";
 import axios from "axios";
+import { useSelector, useDispatch } from "react-redux";
+import { saveUserId, clearUserId, saveUserInfo, setWeatherInfo } from "./store/store";
 
 function Login(){  
 
     let [id, setId] = useState('');
     let [pw, setPw] = useState('');
 
+    //redux 저장용으로 만든 store 에 있는 slice에 값 변경하는 acition 함수 호출을 하려면
+    // dispatch 에 감싸서 요청해야한다  dispatch(수행할 내용)
+    let dispatch = useDispatch();
+
+    //redux 에 저장되어 있는 값들을 접근해서 사용
+    let reduxState = useSelector((state)=>{return state});
+
+    console.log(reduxState);
+    console.log(reduxState.user);
+    console.log(reduxState.weather);
+
+    let user = useSelector((state)=>{return state.user});
+    console.log(user);
+
+    let weather = useSelector((state)=>{return state.weather});
+    console.log(weather);
+
     return (
         <div>
+            <h1>Redux Test</h1>
+            <div>
+                <button onClick={()=>{
+                    // saveUserId('mynewId'); 단순함수호출 X
+                    dispatch(saveUserId('mynewId')); //redux 관련 함수(action) 호출
+                    console.log(user);
+                }}>saveUserId</button>
+
+                <button onClick={()=>{
+                    dispatch(clearUserId());
+                }}
+                >ClearUserId</button>
+
+                <button onClick={()=>{
+                    dispatch(saveUserInfo(  {id:'qwe', name:'rr' }   ));
+                }}
+                >SaveUserInfo</button>
+
+                <button onClick={()=>{
+                    dispatch( setWeatherInfo( {weather: 'cloudy', temperature: 30, hmdt: 72} ));
+                }}
+                >setWeatherInfo</button>
+                
+            </div>
+
+
             <h1>React Spring Loing</h1>
 
             <p> id : <input type="text" onChange={(e)=>{ setId(e.target.value)} }></input>   </p>
